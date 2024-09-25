@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "srmpI/YeTs4eWmMrp2sOCBKWxqCfIt/QTsQEvFyLlvo=",
+  "Source": "ucu-andis2-circuitbreaker",
+  "BasePath": "_content/ucu-andis2-circuitbreaker",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

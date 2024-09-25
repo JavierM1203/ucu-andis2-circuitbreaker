@@ -1,0 +1,6 @@
+@ucu_andis2_circuitbreaker_HostAddress = http://localhost:5111
+
+GET {{ucu_andis2_circuitbreaker_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
