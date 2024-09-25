@@ -32,7 +32,7 @@ En este ejercicio, desarrollarás una aplicación en .NET que consume un servici
 
 - **Opción A: Usar una API Pública**
   - Puedes utilizar una API pública como [JSONPlaceholder](https://jsonplaceholder.typicode.com/) para simular el servicio externo.
-- **Opción B: Utilizar una API local (ej.: ANDISBANK**
+- **Opción B: Utilizar una API local (ej.: ANDISBANK)**
   - Utiliza un proyecto hecho en clases anteriores que actúe como servicio externo, donde puedas controlar y simular fallos.
 
 #### **3. Añadir la Librería Polly**
