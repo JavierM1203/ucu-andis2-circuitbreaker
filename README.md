@@ -26,7 +26,7 @@ En este ejercicio, desarrollarás una aplicación en .NET que consume un servici
   - .NET SDK 6.0 o superior instalado.
   - Un IDE como Visual Studio 2022 o Visual Studio Code.
 - **Crear un Nuevo Proyecto:**
-  - Abre tu IDE y crea un nuevo proyecto de tipo **Console App** o **ASP.NET Core Web API**.
+  - Abre VS y crea un nuevo proyecto de tipo **Console App** o **ASP.NET Core Web API**.
 
 #### **2. Simulación del Servicio Externo**
 
@@ -37,7 +37,7 @@ En este ejercicio, desarrollarás una aplicación en .NET que consume un servici
 
 #### **3. Añadir la Librería Polly**
 
-- **Instalar Polly mediante NuGet:**
+- **Instalar Polly mediante NuGet (CLI o interfaz gráfica):**
 
   ```bash
   dotnet add package Polly
@@ -141,10 +141,10 @@ En este ejercicio, desarrollarás una aplicación en .NET que consume un servici
 
 #### **6. Simular Fallos en el Servicio Externo**
 
-- **Métodos para Simular Fallos:**
+- **Formas para Simular Fallos:**
   - **Modificar la URL** para que apunte a un endpoint inexistente.
   - **Desconectar la red** temporalmente.
-  - **Usar una herramienta** como Fiddler o Postman para interceptar y modificar las respuestas.
+  - **Usar una herramienta** como Fiddler para interceptar y modificar las respuestas.
 
 #### **7. Ejecutar y Observar el Comportamiento**
 
@@ -194,32 +194,9 @@ En este ejercicio, desarrollarás una aplicación en .NET que consume un servici
   var policyWrap = Policy.WrapAsync(fallbackPolicy, _circuitBreakerPolicy, retryPolicy);
   ```
 
-#### **9. Documentar y Analizar**
-
-- **Crear un Informe que Incluya:**
-  - **Descripción de la Implementación:** Explica cómo configuraste el Circuit Breaker y otras políticas.
+#### **9. Presentar en clase**
   - **Resultados de las Pruebas:** Incluye logs y capturas de pantalla.
   - **Análisis del Comportamiento:** Discute cómo el Circuit Breaker mejoró la resiliencia.
-  - **Conclusiones y Mejoras Futuras:** Reflexiona sobre el ejercicio y posibles optimizaciones.
-
----
-
-### **Entregables:**
-
-1. **Código Fuente:**
-   - Archivos `.cs` con la implementación completa.
-2. **Informe Escrito:**
-   - Documento en formato PDF o Word con el análisis solicitado.
-
----
-
-### **Criterios de Evaluación:**
-
-- **Funcionalidad Correcta (40%):** La aplicación debe ejecutar correctamente el patrón Circuit Breaker y manejar fallos como se espera.
-- **Calidad del Código (20%):** Código limpio, organizado y bien comentado.
-- **Análisis y Documentación (30%):** Informe detallado y reflexivo sobre la implementación y resultados.
-- **Creatividad y Complejidad Adicional (10%):** Implementación de funcionalidades extra o análisis profundos.
-
 ---
 
 ### **Recursos Adicionales:**
@@ -227,27 +204,4 @@ En este ejercicio, desarrollarás una aplicación en .NET que consume un servici
 - **Documentación de Polly:**
   - [Sitio Oficial de Polly](https://github.com/App-vNext/Polly)
   - [Wiki de Polly](https://github.com/App-vNext/Polly/wiki)
-- **Tutoriales y Artículos:**
-  - [Implementing the Circuit Breaker Pattern in .NET Core with Polly](https://www.pluralsight.com/guides/implementing-the-circuit-breaker-pattern-in-net-core-with-polly)
-  - [Polly y Resiliencia en .NET](https://docs.microsoft.com/es-es/dotnet/architecture/cloud-native/resilient-applications/polly)
-- **Videos Educativos:**
-  - [Resiliencia con Polly en .NET (YouTube)](https://www.youtube.com/watch?v=E7Voso411Vs)
-- **Libros Recomendados:**
-  - *"Building Resilient Applications with Polly"* - [Autor]
-
 ---
-
-### **Consejos para el Éxito:**
-
-- **Comprende el Flujo de Estados:**
-  - Asegúrate de entender cómo y cuándo el Circuit Breaker cambia de estado (Closed, Open, Half-Open).
-- **Prueba Diferentes Escenarios:**
-  - Simula no solo fallos, sino también recuperaciones exitosas para observar el restablecimiento del circuito.
-- **Utiliza Logs Detallados:**
-  - Implementa logging para facilitar el seguimiento y análisis del comportamiento de la aplicación.
-- **Reflexiona sobre la Experiencia:**
-  - Piensa en cómo este patrón podría aplicarse en proyectos reales y qué beneficios aportaría.
-
----
-
-¡Buena suerte con el ejercicio! Esta práctica te brindará una comprensión sólida de cómo implementar y aprovechar el patrón Circuit Breaker en tus aplicaciones .NET, mejorando su resiliencia y confiabilidad.
